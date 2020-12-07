@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width:70%;
+  margin: 50px 15%;
+}
+
+.flex-blocks {
+  background-color: #fafacc;
+  border: 1px solid grey;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.flex-blocks .block {
+  width: 200px;
+  height: 200px;
+  background: -moz-linear-gradient(-45deg, rgba(221,4,18,0.83) 0%, rgba(221,6,20,0.83) 1%, rgba(242,181,187,0.96) 78%, rgba(252,244,252,1) 100%);
+}
+
+
+.flex-blocks .block:first-of-type {
+  background: -moz-linear-gradient(-45deg, rgba(221,4,18,0.83) 0%, rgba(219,4,20,0.83) 1%, rgba(3,14,173,1) 100%);
+  align-self: flex-start;
+  animation-name: first;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  animation-direction: alternate;
+}
+
+ @keyframes first {
+   from {
+     position: relative;
+     top: 0;
+     left: 0;
+   }
+   to {
+     position: relative;
+     top: 150px;
+     left: 250px;
+   }
+ }
+
+.flex-blocks .block:last-of-type {
+  align-self: flex-end;
+  animation-name: second;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+}
+
+@keyframes second {
+  0% {
+    transform: rotate(0deg);
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    transform: rotate(90deg);
+    position: relative;
+    top: 100px;
+
+  }
+}
